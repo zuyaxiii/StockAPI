@@ -1,0 +1,44 @@
+{
+    "info": {
+      "name": "Stock Price API",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Get Single Stock Price",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "{{baseUrl}}/api/stocks/AAPL",
+            "host": ["{{baseUrl}}"],
+            "path": ["api", "stocks", "AAPL"]
+          }
+        }
+      },
+      {
+        "name": "Get Multiple Stock Prices",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "{{baseUrl}}/api/stocks?symbols=AAPL,MSFT,GOOGL",
+            "host": ["{{baseUrl}}"],
+            "path": ["api", "stocks"],
+            "query": [
+              {
+                "key": "symbols",
+                "value": "AAPL,MSFT,GOOGL"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "variable": [
+      {
+        "key": "baseUrl",
+        "value": "http://localhost:3000"
+      }
+    ]
+  }
